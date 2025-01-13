@@ -1,6 +1,5 @@
 package com.pam.pamfirebase_139.navigation
 
-import HomeScreen
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -11,9 +10,11 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.pam.pamfirebase_139.ui.view.DestinasiDetail
 import com.pam.pamfirebase_139.ui.view.DestinasiEntry
+import com.pam.pamfirebase_139.ui.view.DestinasiHome
 import com.pam.pamfirebase_139.ui.view.DestinasiUpdate
 import com.pam.pamfirebase_139.ui.view.DetailView
 import com.pam.pamfirebase_139.ui.view.EntryMhsScreen
+import com.pam.pamfirebase_139.ui.view.HomeScreen
 import com.pam.pamfirebase_139.ui.view.UpdateView
 
 @Composable
