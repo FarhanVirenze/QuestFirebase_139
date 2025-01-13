@@ -25,6 +25,11 @@
   <img src="https://github.com/user-attachments/assets/791cac5a-e15a-433d-b8ac-4602c0c8704b" alt="Tampilan Data UpdateView UCP">
 </p>
 
+<p align="center">Tampilan Data DeleteView UCP</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b51b8ed7-350a-4a60-b8fc-f3d589fce5c5" alt="Tampilan Data DeleteView UCP">
+</p>
+
 <p align="center">Tampilan Data FireStore Database</p>
 <p align="center">
   <img src="https://github.com/user-attachments/assets/af3fb196-2ffe-4ccd-8154-001f9cb6ced3" alt="Tampilan Data FireStore Database">
