@@ -1,4 +1,5 @@
-import android.util.Log
+package com.pam.pamfirebase_139.ui.view
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
