@@ -119,8 +119,9 @@ fun FormInput(
     onValueChange: (UpdateUiEvent) -> Unit = {},
     enabled: Boolean = true
 ) {
-    val genderOptions = listOf("Laki-laki", "Perempuan")
-    val kelasOptions = listOf("A", "B", "C", "D", "E")
+    val genderOptions = listOf("Laki-Laki","Perempuan")
+    val kelasOptions = listOf("A", "B", "C")
+
 
     Column(modifier = modifier.fillMaxWidth()) {
         OutlinedTextField(
@@ -146,48 +147,78 @@ fun FormInput(
             isError = updateUiEvent.nim.isBlank()
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(text = "Jenis Kelamin")
-        genderOptions.forEach { gender ->
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                RadioButton(
-                    selected = updateUiEvent.gender == gender,
-                    onClick = { onValueChange(updateUiEvent.copy(gender = gender)) },
-                    enabled = enabled
-                )
-                Text(text = gender)
-            }
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-
         OutlinedTextField(
-            value = updateUiEvent.alamat,
-            onValueChange = { onValueChange(updateUiEvent.copy(alamat = it)) },
-            label = { Text("Alamat") },
+            value = updateUiEvent.judul,
+            onValueChange = { onValueChange(updateUiEvent.copy(judul = it)) },
+            label = { Text("Judul Skripsi ") },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true,
-            placeholder = { Text("Masukkan Alamat") },
-            isError = updateUiEvent.alamat.isBlank()
+            placeholder = { Text("Masukkan Judul Skripsi") },
+            isError = updateUiEvent.judul.isBlank()
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Text(text = "Kelas")
-        kelasOptions.forEach { kelas ->
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                RadioButton(
-                    selected = updateUiEvent.kelas == kelas,
-                    onClick = { onValueChange(updateUiEvent.copy(kelas = kelas)) },
-                    enabled = enabled
-                )
-                Text(text = kelas)
+        Text(text = "Jenis Kelamin")
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp) // Space between radio buttons
+        ) {
+            genderOptions.forEach { gender ->
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    RadioButton(
+                        selected = updateUiEvent.gender == gender,
+                        onClick = { onValueChange(updateUiEvent.copy(gender = gender)) },
+                        enabled = enabled
+                    )
+                    Text(text = gender)
+                }
             }
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        OutlinedTextField(
+            value = updateUiEvent.dosbim1,
+            onValueChange = { onValueChange(updateUiEvent.copy(dosbim1 = it)) },
+            label = { Text("Dosbim1") },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = enabled,
+            singleLine = true,
+            placeholder = { Text("Masukkan Dosbim1") },
+            isError = updateUiEvent.dosbim1.isBlank()
+        )
+
+        OutlinedTextField(
+            value = updateUiEvent.dosbim2,
+            onValueChange = { onValueChange(updateUiEvent.copy(dosbim2 = it)) },
+            label = { Text("Dosbim2") },
+            modifier = Modifier.fillMaxWidth(),
+            enabled = enabled,
+            singleLine = true,
+            placeholder = { Text("Masukkan Dosbim2") },
+            isError = updateUiEvent.dosbim2.isBlank()
+        )
+
+        Text(text = "Kelas")
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp) // Space between radio buttons
+        ) {
+            kelasOptions.forEach { kelas ->
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Start
+                ) {
+                    RadioButton(
+                        selected = updateUiEvent.kelas == kelas,
+                        onClick = { onValueChange(updateUiEvent.copy(kelas = kelas)) },
+                        enabled = enabled
+                    )
+                    Text(text = kelas)
+                }
+            }
+        }
 
         OutlinedTextField(
             value = updateUiEvent.angkatan,
@@ -208,10 +239,5 @@ fun FormInput(
                 style = MaterialTheme.typography.bodySmall
             )
         }
-
-        Divider(
-            thickness = 1.dp,
-            modifier = Modifier.padding(vertical = 12.dp)
-        )
     }
 }

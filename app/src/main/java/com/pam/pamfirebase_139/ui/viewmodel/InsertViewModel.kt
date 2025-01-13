@@ -21,10 +21,12 @@ class InsertViewModel(private val mhs: RepositoryMhs) : ViewModel() {
         val event = uiState.insertUiEvent
         return event.nama.isNotBlank() &&
                 event.nim.isNotBlank() &&
-                event.alamat.isNotBlank() &&
                 event.gender.isNotBlank() &&
                 event.kelas.isNotBlank() &&
-                event.angkatan.isNotBlank()
+                event.angkatan.isNotBlank() &&
+                event.judul.isNotBlank() &&
+                event.dosbim1.isNotBlank() &&
+                event.dosbim2.isNotBlank()
     }
 
     fun insertMhs() {
@@ -46,19 +48,23 @@ data class InsertUiState(
 data class InsertUiEvent(
     val nim: String = "",
     val nama: String = "",
-    val alamat: String = "",
     val gender: String = "",
     val kelas: String = "",
-    val angkatan: String = ""
+    val angkatan: String = "",
+    val judul: String = "",
+    val dosbim1: String = "",
+    val dosbim2: String = ""
 )
 
 fun InsertUiEvent.toMhs(): Mahasiswa {
     return Mahasiswa(
         nim = nim,
         nama = nama,
-        alamat = alamat,
         gender = gender,
         kelas = kelas,
-        angkatan = angkatan
+        angkatan = angkatan,
+        judul = judul,
+        dosbim1 = dosbim1,
+        dosbim2 = dosbim2
     )
 }

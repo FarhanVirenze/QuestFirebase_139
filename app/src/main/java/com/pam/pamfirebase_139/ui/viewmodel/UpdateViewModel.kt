@@ -48,27 +48,33 @@ data class UpdateUiState(
 data class UpdateUiEvent(
     val nim: String = "",
     val nama: String = "",
-    val alamat: String = "",
     val gender: String = "",
     val kelas: String = "",
-    val angkatan: String = ""
+    val angkatan: String = "",
+    val judul: String = "",
+    val dosbim1: String = "",
+    val dosbim2: String = ""
 )
 
 fun UpdateUiEvent.toMahasiswa(): Mahasiswa = Mahasiswa(
     nim = nim,
     nama = nama,
-    alamat = alamat,
     gender = gender,
     kelas = kelas,
-    angkatan = angkatan
+    angkatan = angkatan,
+    judul = judul,
+    dosbim1 = dosbim1,
+    dosbim2 = dosbim2
 )
 
 fun Mahasiswa.toUpdateUiEvent(): UpdateUiEvent = UpdateUiEvent(
     nim = nim,
     nama = nama,
-    alamat = alamat,
     gender = gender,
     kelas = kelas,
-    angkatan = angkatan
+    angkatan = angkatan,
+    judul = judul,
+    dosbim1 = dosbim1,
+    dosbim2 = dosbim2
 )
 

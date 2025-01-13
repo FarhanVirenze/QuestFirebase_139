@@ -130,9 +130,6 @@ fun ItemDetailMhs(
             ComponentDetailMhs(judul = "Nama", isinya = mahasiswa.nama)
             Spacer(modifier = Modifier.height(8.dp))
 
-            ComponentDetailMhs(judul = "Alamat", isinya = mahasiswa.alamat)
-            Spacer(modifier = Modifier.height(8.dp))
-
             ComponentDetailMhs(judul = "Jenis Kelamin", isinya = mahasiswa.gender)
             Spacer(modifier = Modifier.height(8.dp))
 
@@ -140,6 +137,17 @@ fun ItemDetailMhs(
             Spacer(modifier = Modifier.height(8.dp))
 
             ComponentDetailMhs(judul = "Angkatan", isinya = mahasiswa.angkatan)
+            Spacer(modifier = Modifier.height(8.dp))
+
+            ComponentDetailMhs(judul = "Judul Skripsi", isinya = mahasiswa.judul)
+            Spacer(modifier = Modifier.height(8.dp))
+
+            ComponentDetailMhs(judul = "Dosen Bimbing 1", isinya = mahasiswa.dosbim1)
+            Spacer(modifier = Modifier.height(8.dp))
+
+            ComponentDetailMhs(judul = "Dosen Bimbing 2", isinya = mahasiswa.dosbim2)
+            Spacer(modifier = Modifier.height(8.dp))
+
         }
     }
 }

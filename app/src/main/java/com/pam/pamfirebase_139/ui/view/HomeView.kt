@@ -21,6 +21,7 @@ import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.AlertDialog
@@ -238,30 +239,6 @@ fun MhsCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Filled.Face, contentDescription = "Jenis Kelamin")
-                Spacer(modifier = Modifier.padding(4.dp))
-                Text(
-                    text = mahasiswa.gender,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.weight(1f)
-                )
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(imageVector = Icons.Filled.DateRange, contentDescription = "Angkatan")
-                Spacer(modifier = Modifier.padding(4.dp))
-                Text(
-                    text = mahasiswa.angkatan,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.weight(1f)
-                )
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
                 Icon(imageVector = Icons.Filled.Edit, contentDescription = "Kelas")
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
@@ -274,10 +251,10 @@ fun MhsCard(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Filled.LocationOn, contentDescription = "Alamat")
+                Icon(imageVector = Icons.Filled.Info, contentDescription = "Judul Skripsi")
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
-                    text = mahasiswa.alamat,
+                    text = mahasiswa.judul,
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.weight(1f)
                 )
