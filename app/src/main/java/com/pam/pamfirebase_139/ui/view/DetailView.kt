@@ -1,7 +1,5 @@
 package com.pam.pamfirebase_139.ui.view
 
-import android.os.Build
-import androidx.annotation.RequiresExtension
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
